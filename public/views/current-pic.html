@@ -1,0 +1,16 @@
+<div class="container">
+	<button class="btn btn-primary pointer" ng-click="vm.backToPictures()"><i class="fa fa-arrow-left"></i> Back to Pics</button>
+	<div class="row">
+		<div class="col-xs-12 offset-md-4 col-md-4 offset-sm-2 col-sm-8">
+			<div class="card text-center">
+			 <img class="card-img-top img-responsive img-proportional" ng-src="{{vm.currentPic.preview.images[0].source.url}}" />
+			 <div class="card-block">
+			  <h4 class="card-title">{{vm.currentPic.title}}</h4>
+			  <h6 class="text-muted">Posted by: {{vm.currentPic.author}}</h6>
+			  <h6 class="text-muted">{{vm.currentPic.num_comments}} Comments</h6>
+			  <a ng-href="{{vm.currentPic.permalink}}"><button class="btn btn-primary pointer">Read more at <i class="fa fa-reddit"></i></i>!</button></a>
+			 </div>
+			</div>
+		</div>
+	</div>
+</div>

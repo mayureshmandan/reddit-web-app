@@ -1,0 +1,17 @@
+<div class="container-fluid">
+	<h1 class="text-center"><i class="fa fa-reddit-alien fa-2x"></i> Reddit Pics</h1>
+	<div class="text-center">
+		<button class="btn btn-primary pointer mb-1" ng-click="vm.sortBy('data.title')"> Filter by Title</button>
+	</div>
+	<div class="container m-t-md">
+	 <div class="row">
+	  <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="pic in vm.pics | orderBy:propertName">
+	   <div class="card text-center" ng-click="vm.goToPic(pic.data)">
+	    <img class="card-img-top img-responsive img-proportional" ng-src="{{pic.data.thumbnail}}" />
+	    <div class="card-block">
+	     <p class="card-text">{{pic.data.title}}</p>
+	    </div>
+	   </div>
+	  </div>
+	</div>
+</div>
