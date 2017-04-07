@@ -8,7 +8,7 @@ function picsService($http, $q) {
 	picsService.getPics = function(){
 		return $http({
 		method: 'GET',
-		url: 'http://www.reddit.com/r/pics/.json'
+		url: 'https://www.reddit.com/r/pics/.json'
 	}).then(function(response) {    
 			picsService.pics = response.data.data.children;
 			return response.data;
